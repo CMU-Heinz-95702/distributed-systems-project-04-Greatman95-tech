@@ -1,0 +1,7 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "docker build -t artsearch-container . && docker run -d -p 8080:8080 artsearch-container"
+}
